@@ -6,16 +6,37 @@
 
 // ### 1. Affiche le contenu textuel du second h1
 
-let secH1 = document.getElementsByTagName("h1")[1];
-console.log(secH1.innerText);
+let secH1Contenu = document.getElementsByTagName("h1")[1];
+
+console.log(secH1Contenu.innerText);
 
 // ### 2. Affiche le contenu textuel du dernier li
 
-let lasti = document.getElementsByTagName("li")[3];
-console.log(lasti.innerText); 
+// trouver le nombre de li d'abord
+// let allLi = document.getElementsByTagName("li");
+// console.log(allLi);
+
+// mtn afficher le contenu du dernier li
+
+let lastLi = document.getElementsByTagName('li')[3];
+console.log(lastLi.innerText);
+
 // ### 3. Affiche le contenu textuel du premier p en majuscule
 
 let firstP = document.getElementsByTagName("p")[0];
-console.log(firstP.innerText.toUpperCase());
+console.log(firstP.innerText);
 
 // ### 4. Avec l'aide d'un forEach affiche le contenu de chaque li, bonus : affiche chaque li en majuscule
+
+let allLi = document.querySelectorAll("li");
+console.log(allLi);
+
+// changer en array :
+
+Array.from(allLi);
+console.log(allLi);
+
+
+allLi.forEach(element => {
+     console.log(element.innerText.toUpperCase());
+});
